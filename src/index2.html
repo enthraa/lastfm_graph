@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas HTML avec une image</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+
+    <script>
+      // Récupérer le canvas
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Créer une nouvelle instance d'image
+      const image = new Image();
+
+      // Lorsque l'image est chargée, la dessiner sur le canvas
+      image.onload = function () {
+        ctx.drawImage(image, 0, 0);
+      };
+
+      // Spécifier la source de l'image
+      image.src = "chemin/vers/votre/image.jpg";
+    </script>
+  </body>
+</html>
